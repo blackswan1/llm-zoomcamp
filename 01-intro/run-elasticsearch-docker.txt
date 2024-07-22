@@ -9,6 +9,12 @@ docker run -it \
     -e "xpack.security.enabled=false" \
     docker.elastic.co/elasticsearch/elasticsearch:8.4.3
 
+# Check if elasticsearch is up and running
+curl http://localhost:9200
+curl http://localhost:9200/_cat/indices?v
+
+
+
 # If the previous command doesn't work (i.e. you see "error pulling image configuration"), try to run ElasticSearch directly from Docker Hub:
 
 docker run -it \
